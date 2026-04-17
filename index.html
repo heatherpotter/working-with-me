@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Working With Me — Heather Potter</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #ffffff;
+    --off-white: #f7f8f9;
+    --teal: #4a9990;
+    --teal-light: #eaf4f3;
+    --teal-mid: #b2d8d4;
+    --teal-rule: #cce8e5;
+    --navy: #1c2b3a;
+    --slate: #536070;
+    --muted: #93a3b0;
+    --border: #e3e8ec;
+    --text: #2c3a48;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HEADER */
+  .header {
+    padding: 44px 52px 38px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 14px;
+  }
+
+  .header-name {
+    font-family: 'Lora', serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .header-purpose {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--slate);
+    line-height: 1.7;
+    max-width: 680px;
+    padding-left: 16px;
+    border-left: 2px solid var(--teal-mid);
+  }
+
+  /* PAGE */
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 52px 72px;
+  }
+
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  /* SECTION BLOCKS */
+  .block {
+    padding: 36px 40px 36px 0;
+  }
+
+  .block.right {
+    padding: 36px 0 36px 40px;
+    border-left: 1px solid var(--border);
+  }
+
+  .block-row {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .block-row:last-child {
+    border-bottom: none;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+
+  .block-title {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  /* VALUES */
+  .value-item {
+    margin-bottom: 16px;
+  }
+
+  .value-item:last-child { margin-bottom: 0; }
+
+  .value-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .value-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+  }
+
+  .value-desc {
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.6;
+    padding-left: 13px;
+  }
+
+  /* LISTS */
+  .item-list {
+    list-style: none;
+  }
+
+  .item-list li {
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.65;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 9px;
+  }
+
+  .item-list li:last-child { margin-bottom: 0; }
+
+  .item-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--teal-mid);
+  }
+
+  /* ENNEAGRAM NOTE */
+  .ennea-note {
+    margin-top: 18px;
+    font-size: 11px;
+    color: var(--muted);
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 680px) {
+    .header { padding: 32px 24px 28px; }
+    .page { padding: 0 24px 52px; }
+    .grid { grid-template-columns: 1fr; }
+    .block { padding: 28px 0; }
+    .block.right { padding: 28px 0; border-left: none; border-top: 1px solid var(--border); }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="eyebrow">Working With Me</div>
+    <div class="header-name">Heather Potter</div>
+    <p class="header-purpose">"My purpose is to bring people together to build and lead something meaningful that creates security and connection for myself and the people I care about."</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- ROW 1: VALUES + STRENGTHS -->
+    <div class="block-row" style="grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+
+      <div class="block">
+        <div class="section-label">What I Value</div>
+        <div class="block-title">My Values</div>
+        <div class="value-item">
+          <div class="value-name"><span class="value-dot"></span>Security</div>
+          <p class="value-desc">Creating stability, opportunity, and protection for the people around me.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-name"><span class="value-dot"></span>Wholeheartedness</div>
+          <p class="value-desc">Leading with care, honesty, and alignment even when it is uncomfortable.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-name"><span class="value-dot"></span>Success</div>
+          <p class="value-desc">Building something meaningful, high-performing, and impactful.</p>
+        </div>
+      </div>
+
+      <div class="block right">
+        <div class="section-label">Where I Shine</div>
+        <div class="block-title">My Strengths</div>
+        <ul class="item-list">
+          <li>I am authentically me. What you see is what you get, no performance</li>
+          <li>I take accountability for my actions, including when I get it wrong</li>
+          <li>I can read a room and know when to lean in and when to hold back</li>
+          <li>I am curious about myself, other people, and what is actually going on beneath the surface</li>
+          <li>I stay grounded when things get hard. I don't spiral and I don't catastrophize</li>
+          <li>I address issues head-on, make decisions, and live with the results right or wrong</li>
+          <li>I genuinely care about people. Not as a management tactic, just because I do</li>
+          <li>I get things done and I try not to take any of it too seriously</li>
+        </ul>
+        <div class="ennea-note">Enneagram SP-3 &middot; Competitive Achiever</div>
+      </div>
+
+    </div>
+
+    <!-- ROW 2: IMPROVERS + TRIGGERS -->
+    <div class="block-row" style="grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+
+      <div class="block">
+        <div class="section-label">Where I Struggle</div>
+        <div class="block-title">My Improvers</div>
+        <ul class="item-list">
+          <li>I am working on being more strategic and thinking longer-term instead of moving straight to execution</li>
+          <li>I don't always know when to cut losses. I can sometimes keep pouring into something or someone too long</li>
+          <li>I delegate best when I have seen someone earn it. Getting there can take time, and I know I sometimes hold on longer than I need to while trust is being built</li>
+          <li>I sometimes soften or delay hard conversations when I am trying to protect a relationship</li>
+          <li>I have a tendency to become a workaholic, though I have worked on this significantly over the years. It can still show up as high standards and expectations of the people around me</li>
+        </ul>
+      </div>
+
+      <div class="block right">
+        <div class="section-label">What Pushes My Buttons</div>
+        <div class="block-title">My Triggers</div>
+        <ul class="item-list">
+          <li>Lack of ownership. When something slips and no one is willing to say that was on me</li>
+          <li>Misalignment or unclear expectations that could have been avoided with a quick conversation</li>
+          <li>Feeling like I am carrying weight that should be shared</li>
+          <li>When people are not being treated fairly or with basic care. I will always notice and it will always bother me</li>
+          <li>High-stakes situations where there is no clarity and no one seems to be steering</li>
+          <li>People acting out of self-interest rather than the greater good. If I sense ego is driving a decision more than what is right for the team or the people we serve, it bothers me</li>
+          <li>People being dishonest or not forthcoming. If I sense someone is skirting the truth or telling me what they think I want to hear, it will erode trust fast</li>
+          <li>Misspelling HIPAA. It stands for Health Insurance Portability and Accountability Act. There is no second P. If you work in healthcare and you spell it HIPPA, we will have a conversation</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ROW 3: USER GUIDE (full width) -->
+    <div class="block-row" style="grid-column: span 2;">
+      <div class="block" style="padding-right: 0;">
+        <div class="section-label">How to Best Work With Me</div>
+        <div class="block-title">My User Guide</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 48px;">
+          <ul class="item-list">
+            <li>Be direct, clear, and raw with me. I would rather have the honest version than the polished one</li>
+            <li>Take ownership and come with solutions, not just the problem</li>
+            <li>Keep me in the loop, especially when something goes sideways</li>
+            <li>Align with me early on priorities and expectations, not after the fact</li>
+            <li>Push back on my thinking when you disagree. I want the best idea to win, not just mine</li>
+          </ul>
+          <ul class="item-list">
+            <li>Give me space to think when I need to go strategic. I don't always do my best thinking in real time</li>
+            <li>Trust that I care about people as much as outcomes. It is not either/or for me</li>
+            <li>If something feels off, say it early. I would always rather deal with it than let it grow</li>
+            <li>Tell me the truth even when it is hard. Honesty and integrity are the foundation of how I want to work with the people around me</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">Heather Potter &nbsp;&middot;&nbsp; SP-3 Competitive Achiever</div>
+
+</div>
+</body>
+</html>
